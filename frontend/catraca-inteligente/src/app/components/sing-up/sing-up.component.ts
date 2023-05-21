@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'sing-up',
+  templateUrl: './sing-up.component.html'
 })
 export class AppComponent {
   title = 'catraca-inteligente';
