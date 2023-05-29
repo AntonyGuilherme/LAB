@@ -1,0 +1,41 @@
+nb-layout-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    nb-card {
+        width: 800px;
+        height: 400px;
+
+        nb-card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            .input-continaer {
+                display: flex;
+                flex-direction: column;
+                span {
+                    margin-bottom: 2px;
+                    font-weight: bolder;
+                }
+                input {
+                    width: 500px;
+                }
+            }
+            .button-container {
+                display: flex;
+                justify-content: flex-end;
+                width: 320px;
+            }
+            .sing-up-label-container {
+                display: flex;
+                justify-content: flex-end;
+                width: 320px;
+                cursor: pointer;
+            }
+        }
+    }
+}
