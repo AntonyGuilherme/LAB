@@ -8,6 +8,29 @@
           "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props": {},
           "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets": {}
         }
+      },
+      "Applicaition/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Applicaition.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Applicaition.dll": {}
+        }
+      },
+      "Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.dll": {}
+        }
       }
     }
   },
@@ -91,10 +114,21 @@
         "tools/zh-Hant/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
         "tools/zh-Hant/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll"
       ]
+    },
+    "Applicaition/1.0.0": {
+      "type": "project",
+      "path": "../Applicaition/Applicaition.csproj",
+      "msbuildProject": "../Applicaition/Applicaition.csproj"
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Applicaition >= 1.0.0",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.15.1"
     ]
   },
@@ -124,7 +158,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\LAB Projetos II\\Catacra Inteligente\\LAB\\backend\\catraca inteligente - api\\catraca-inteligente\\Applicaition\\Applicaition.csproj": {
+              "projectPath": "D:\\LAB Projetos II\\Catacra Inteligente\\LAB\\backend\\catraca inteligente - api\\catraca-inteligente\\Applicaition\\Applicaition.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
