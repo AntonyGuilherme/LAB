@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserSingUpModel } from 'src/app/models/user-sing-up.model';
+import { UserModel } from 'src/app/models/user-sing-up.model';
 import { CatracaInteligenteService } from 'src/app/services/catraca-inteligente.service';
 
 @Component({
@@ -10,13 +10,16 @@ import { CatracaInteligenteService } from 'src/app/services/catraca-inteligente.
 })
 export class UserPanelComponent {
 
-  model: UserSingUpModel = {
+  model: UserModel = {
     name: '',
     email: '',
     ufmgEnrollment: '',
-    password: '',
+    ufmgToken: ''
   };
 
+  paymentModel: { token: string } = { token: ''};
+
+  
   public constructor(
     private catracaInteligenteService: CatracaInteligenteService,
     private router: Router) {}
