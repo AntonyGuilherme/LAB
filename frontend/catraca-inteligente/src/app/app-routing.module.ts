@@ -6,6 +6,7 @@ import { UserPanelComponent } from './components/user-panel/user-panel.component
 
 const routes: Routes = [
   { path: 'sing-up', component: SingUpComponent },
+  { path: '', component: SingInComponent },
   { path: 'sing-in', component: SingInComponent },
   { path: 'user-panel', component: UserPanelComponent }
 ];
