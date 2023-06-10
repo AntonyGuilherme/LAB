@@ -4,16 +4,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NbButtonModule, NbCardModule, NbInputModule, NbLayoutModule, NbSidebarModule, NbStatusService, NbThemeModule, NbThemeService } from '@nebular/theme';
+import { NbButtonModule, NbCardModule, NbInputModule, NbLayoutModule, NbSidebarModule, NbStatusService, NbTabsetModule, NbThemeModule, NbThemeService } from '@nebular/theme';
 import { SingUpComponent } from './components/sing-up/sing-up.component';
 import { SingInComponent } from './components/sing-in/sing-in.component';
 import { FormsModule } from '@angular/forms';
+import { UserPanelComponent } from './components/user-panel/user-panel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SingUpComponent,
-    SingInComponent
+    SingInComponent,
+    UserPanelComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     NbSidebarModule.forRoot(),
     NbThemeModule.forRoot(),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NbTabsetModule,
   ],
   providers: [
     NbStatusService, 

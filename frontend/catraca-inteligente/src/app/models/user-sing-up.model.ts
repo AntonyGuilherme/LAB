@@ -4,3 +4,10 @@ export type UserSingUpModel = {
     password: string,
     ufmgEnrollment: string
 };
+
+export type UserModel = {
+    name: string,
+    email: string,
+    ufmgToken: string,
+    ufmgEnrollment: string
+}

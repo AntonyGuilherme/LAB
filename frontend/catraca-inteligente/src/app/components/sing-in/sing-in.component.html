@@ -1,23 +1,19 @@
-<nb-layout>
-    <nb-layout-column>
-       <nb-card>
-        <nb-card-header>Entrar</nb-card-header>
-        <nb-card-body>
-                <div class="input-continaer">
-                    <label for="email"> <strong>E-mail</strong> </label>
-                    <input id="email" nbInput type="e-mail" [(ngModel)]="model.email">
-                </div>
-                <div class="input-continaer">
-                    <label for="email"> <strong> Senha </strong> </label>
-                    <input id="email" nbInput type="password" [(ngModel)]="model.password">
-                </div>
-                <div class="button-container">
-                    <button nbButton status="primary" (click)="singIn()">Entrar</button>
-                </div>
-                <div class="sing-up-label-container">
-                    <a href="/sing-up">Não possui um acesso? Cadastre-se!</a>
-                </div>
-            </nb-card-body>    
-        </nb-card>
-    </nb-layout-column>
-  </nb-layout>
+<nb-card>
+    <nb-card-header>Entrar</nb-card-header>
+    <nb-card-body>
+        <div class="input-continaer">
+            <label for="email"> <strong>E-mail</strong> </label>
+            <input id="email" nbInput type="e-mail" [(ngModel)]="model.email">
+        </div>
+        <div class="input-continaer">
+            <label for="email"> <strong> Senha </strong> </label>
+            <input id="email" nbInput type="password" [(ngModel)]="model.password">
+        </div>
+        <div class="button-container">
+            <button nbButton status="primary" (click)="singIn()">Entrar</button>
+        </div>
+        <div class="sing-up-label-container">
+            <a href="/sing-up">Não possui um acesso? Cadastre-se!</a>
+        </div>
+    </nb-card-body>
+</nb-card>
