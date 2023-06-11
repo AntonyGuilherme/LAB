@@ -7,20 +7,29 @@ import { UserSingInModel } from "../models/user-sing-in.model";
 @Injectable({ providedIn: 'root' })
 export class CatracaInteligenteService {
 
-    public constructor(public http: HttpClient) {
-
-    }
+    public constructor(public http: HttpClient) { }
 
     getUrlPath(complement: string): string {
-        return '';
+        return `http://localhost:5115/CratracaInteligente/${complement}`;
     }
 
     async singIn(model: UserSingInModel) {
-        return '';
+        const url = this.getUrlPath(`SingIn?email=${model.email}&password=${model.password}`);
+
+        return lastValueFrom(this.http.get(url));
     }
 
     async singUp(model: UserSingUpModel): Promise<any> {
-        return '';
-        return lastValueFrom(this.http.post(this.getUrlPath('sing-up'), model));
+        return lastValueFrom(this.http.post(this.getUrlPath('SingUp'), model));
+    }
+
+    async toggleCardUsability(userId: number) {
+        const url = this.getUrlPath(`ToggleCardUsability`);
+
+        return lastValueFrom(this.http.patch(url, { userId }));
+    }
+
+    async insertPaymentToken(userId: number, paymentToken: string) {
+        return lastValueFrom(this.http.put(this.getUrlPath("InsertPaymentToken"), { userId, paymentToken }));
     }
 }

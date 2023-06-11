@@ -14,7 +14,7 @@ export class SingUpComponent {
 model: UserSingUpModel = {
   name: '',
   email: '',
-  ufmgEnrollment: '',
+  enrollNumber: '',
   password: '',
 };
 

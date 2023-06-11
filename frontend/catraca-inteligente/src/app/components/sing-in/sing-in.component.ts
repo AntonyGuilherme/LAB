@@ -22,6 +22,9 @@ export class SingInComponent {
     singIn() {
         this.catracainteligenteService
         .singIn(this.model)
-        .then(() => this.router.navigate(['./user-panel']));
+        .then((teste) => {
+            console.log(teste)
+            this.router.navigate(['./user-panel']);
+        });
     }
 }
