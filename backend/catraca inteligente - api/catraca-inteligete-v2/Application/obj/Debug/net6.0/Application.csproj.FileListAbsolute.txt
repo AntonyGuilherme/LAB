@@ -1,0 +1,15 @@
+D:\LAB Projetos II\Catacra Inteligente\LAB\backend\catraca inteligente - api\catraca-inteligete-v2\Application\bin\Debug\net6.0\Application.deps.json
+D:\LAB Projetos II\Catacra Inteligente\LAB\backend\catraca inteligente - api\catraca-inteligete-v2\Application\bin\Debug\net6.0\Application.dll
+D:\LAB Projetos II\Catacra Inteligente\LAB\backend\catraca inteligente - api\catraca-inteligete-v2\Application\bin\Debug\net6.0\Application.pdb
+D:\LAB Projetos II\Catacra Inteligente\LAB\backend\catraca inteligente - api\catraca-inteligete-v2\Application\bin\Debug\net6.0\Domain.dll
+D:\LAB Projetos II\Catacra Inteligente\LAB\backend\catraca inteligente - api\catraca-inteligete-v2\Application\bin\Debug\net6.0\Domain.pdb
+D:\LAB Projetos II\Catacra Inteligente\LAB\backend\catraca inteligente - api\catraca-inteligete-v2\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache
+D:\LAB Projetos II\Catacra Inteligente\LAB\backend\catraca inteligente - api\catraca-inteligete-v2\Application\obj\Debug\net6.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\LAB Projetos II\Catacra Inteligente\LAB\backend\catraca inteligente - api\catraca-inteligete-v2\Application\obj\Debug\net6.0\Application.AssemblyInfoInputs.cache
+D:\LAB Projetos II\Catacra Inteligente\LAB\backend\catraca inteligente - api\catraca-inteligete-v2\Application\obj\Debug\net6.0\Application.AssemblyInfo.cs
+D:\LAB Projetos II\Catacra Inteligente\LAB\backend\catraca inteligente - api\catraca-inteligete-v2\Application\obj\Debug\net6.0\Application.csproj.CoreCompileInputs.cache
+D:\LAB Projetos II\Catacra Inteligente\LAB\backend\catraca inteligente - api\catraca-inteligete-v2\Application\obj\Debug\net6.0\Application.csproj.CopyComplete
+D:\LAB Projetos II\Catacra Inteligente\LAB\backend\catraca inteligente - api\catraca-inteligete-v2\Application\obj\Debug\net6.0\Application.dll
+D:\LAB Projetos II\Catacra Inteligente\LAB\backend\catraca inteligente - api\catraca-inteligete-v2\Application\obj\Debug\net6.0\refint\Application.dll
+D:\LAB Projetos II\Catacra Inteligente\LAB\backend\catraca inteligente - api\catraca-inteligete-v2\Application\obj\Debug\net6.0\Application.pdb
+D:\LAB Projetos II\Catacra Inteligente\LAB\backend\catraca inteligente - api\catraca-inteligete-v2\Application\obj\Debug\net6.0\ref\Application.dll
