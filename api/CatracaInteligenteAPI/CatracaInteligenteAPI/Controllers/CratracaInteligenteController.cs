@@ -8,11 +8,18 @@ namespace CatracaInteligenteAPI.Controllers
     {
         private static readonly CatracaInteligenteService _service = new CatracaInteligenteService();
 
+        public class ModelT
+        {
+            public string Name { get; set; }
+            public string Email { get; set; }
+            public string Password { get; set; }
+            public string EnrollNumber { get; set; }
+        }
 
         [HttpPost()]
-        public ActionResult SingUp(string name, string email, string enrollNumber, string password) 
+        public ActionResult SingUp([FromBody] ModelT model) 
         {
-            _service.SingUp(name, email, enrollNumber, password);
+            _service.SingUp(model.Name, model.Email, model.EnrollNumber, model.Password);
 
             return Ok();
         }
@@ -33,18 +40,24 @@ namespace CatracaInteligenteAPI.Controllers
             return Ok();
         }
 
-        [HttpPut()]
-        public ActionResult InsertPaymentToken(long userId, string paymentToken)
+        public class PaymentTokenModel 
         {
-            _service.InsertPaymentToken(userId, paymentToken);
+            public int UserId { get; set; }
+            public string PaymentToken { get; set; }
+        }
+
+        [HttpPut()]
+        public ActionResult InsertPaymentToken([FromBody] PaymentTokenModel payment)
+        {
+            _service.InsertPaymentToken(payment.UserId, payment.PaymentToken);
 
             return Ok();
         }
 
         [HttpGet()]
-        public ActionResult CanUserAccessCollegeRestaurant(long userId)
+        public ActionResult CanUserAccessCollegeRestaurant(string cardId)
         {
-            var canUserAccessCollegeRestaurant = _service.CanUserAccessCollegeRestaurant(userId);
+            var canUserAccessCollegeRestaurant = _service.CanUserAccessCollegeRestaurant(cardId);
 
             return Ok(canUserAccessCollegeRestaurant);
         }

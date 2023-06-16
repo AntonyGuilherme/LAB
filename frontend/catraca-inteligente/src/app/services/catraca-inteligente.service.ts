@@ -1,5 +1,5 @@
 import { Inject, Injectable } from "@angular/core";
-import { UserSingUpModel } from "../models/user-sing-up.model";
+import { UserModel, UserSingUpModel } from "../models/user-sing-up.model";
 import { HttpClient } from "@angular/common/http";
 import { lastValueFrom } from "rxjs";
 import { UserSingInModel } from "../models/user-sing-in.model";
@@ -13,10 +13,10 @@ export class CatracaInteligenteService {
         return `http://localhost:5115/CratracaInteligente/${complement}`;
     }
 
-    async singIn(model: UserSingInModel) {
+    async singIn(model: UserSingInModel): Promise<UserModel> {
         const url = this.getUrlPath(`SingIn?email=${model.email}&password=${model.password}`);
 
-        return lastValueFrom(this.http.get(url));
+        return <Promise<UserModel>> lastValueFrom(this.http.get(url));
     }
 
     async singUp(model: UserSingUpModel): Promise<any> {

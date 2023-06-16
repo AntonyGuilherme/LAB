@@ -10,11 +10,11 @@
                     </div>
                     <div class="input-continaer">
                         <label for="matricula"> <strong>Matrícula UFMG</strong> </label>
-                        <input id="matricula" nbInput type="text" fieldSize="large" [(ngModel)]="model.ufmgEnrollment" disabled>
+                        <input id="matricula" nbInput type="text" fieldSize="large" [(ngModel)]="model.enrollNumber" disabled>
                     </div>
                     <div class="input-continaer">
                         <label for="ufmg-token"> <strong>Carteirinha UFMG</strong> </label>
-                        <input id="ufmg-token" nbInput type="text" fieldSize="large" [(ngModel)]="model.ufmgToken" disabled>
+                        <input id="ufmg-token" nbInput type="text" fieldSize="large" [(ngModel)]="model.cardId" disabled>
                     </div>
                     <div class="input-continaer">
                         <label for="email"> <strong>E-mail</strong> </label>
@@ -26,7 +26,10 @@
                 <div class="user-container">
                     <div class="input-continaer">
                         <label for="token"> <strong>Token de Pagamento</strong> </label>
-                        <input id="token" nbInput type="text" fieldSize="large" [(ngModel)]="paymentModel.token" disabled>
+                        <input id="token" nbInput type="text" fieldSize="large" [(ngModel)]="model.paymentToken">
+                    </div>
+                    <div>
+                        <button nbButton (click)="updatePaymentToken()">Atualizar Token</button>
                     </div>
                 </div>
             </nb-tab>

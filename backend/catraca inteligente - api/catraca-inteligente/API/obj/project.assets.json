@@ -99,26 +99,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\archa\\.nuget\\packages\\": {}
+    "C:\\Users\\word2\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\LAB Projetos II\\Catacra Inteligente\\LAB\\backend\\catraca inteligente - api\\catraca-inteligente\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\word2\\Documents\\LAB\\backend\\catraca inteligente - api\\catraca-inteligente\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "D:\\LAB Projetos II\\Catacra Inteligente\\LAB\\backend\\catraca inteligente - api\\catraca-inteligente\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\archa\\.nuget\\packages\\",
-      "outputPath": "D:\\LAB Projetos II\\Catacra Inteligente\\LAB\\backend\\catraca inteligente - api\\catraca-inteligente\\API\\obj\\",
+      "projectPath": "C:\\Users\\word2\\Documents\\LAB\\backend\\catraca inteligente - api\\catraca-inteligente\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\word2\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\word2\\Documents\\LAB\\backend\\catraca inteligente - api\\catraca-inteligente\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\archa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\word2\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\System.Data.SQLite": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -148,7 +148,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -160,7 +161,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

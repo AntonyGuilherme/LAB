@@ -45,9 +45,9 @@
             user?.InsertPaymentToken(paymentToken);
         }
 
-        public bool CanUserAccessCollegeRestaurant(long userId)
+        public bool CanUserAccessCollegeRestaurant(string cardId)
         {
-            var user = UserRepository.GetById(userId);
+            var user = UserRepository.GetByCardId(cardId);
 
             return user != null && AccessVerifier.CanUserAccessCollegeRestaurant(user);
         }
@@ -111,6 +111,11 @@
         public User? GetById(long userId)
         {
             return _users.FirstOrDefault(u => u.Id == userId);
+        }
+
+        public User? GetByCardId(string cardId)
+        {
+           return _users.FirstOrDefault(u => u.CardId == cardId);
         }
     }
 

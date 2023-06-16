@@ -22,8 +22,8 @@ export class SingInComponent {
     singIn() {
         this.catracainteligenteService
         .singIn(this.model)
-        .then((teste) => {
-            console.log(teste)
+        .then((userData) => {
+            localStorage.setItem("user-data", JSON.stringify(userData));
             this.router.navigate(['./user-panel']);
         });
     }

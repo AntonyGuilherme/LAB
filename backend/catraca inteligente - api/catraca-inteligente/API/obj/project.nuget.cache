@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "APyCr/6WFEE4ktdeg6FjyH3T14dryiv7ZsRY6p/7T3AP1ghW+QhxfQp/XucJCu0wURwAy/FcaF92JJxymB8qbA==",
+  "dgSpecHash": "csnMWY+amWIzr8+IWp8CpITdcADhdvdgm0CnhurF8i3Kp0ESFLw098ffErVqibNvTzE5DA3jASwCx40LocrAwQ==",
   "success": true,
-  "projectFilePath": "D:\\LAB Projetos II\\Catacra Inteligente\\LAB\\backend\\catraca inteligente - api\\catraca-inteligente\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\word2\\Documents\\LAB\\backend\\catraca inteligente - api\\catraca-inteligente\\API\\API.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\archa\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.15.1\\microsoft.visualstudio.azure.containers.tools.targets.1.15.1.nupkg.sha512"
+    "C:\\Users\\word2\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.15.1\\microsoft.visualstudio.azure.containers.tools.targets.1.15.1.nupkg.sha512"
   ],
   "logs": []
 }
