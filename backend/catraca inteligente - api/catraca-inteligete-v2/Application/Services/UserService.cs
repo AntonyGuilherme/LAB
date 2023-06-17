@@ -59,5 +59,10 @@ namespace Applicaition.Services
             var userUpdated = _userRepository.Update(userToUpdate);
             return _userMapper.Map(userUpdated);
         }
+
+        public bool TryPayment(string cardId)
+        {
+            return _userRepository.TryPayment(cardId);
+        }
     }
 }

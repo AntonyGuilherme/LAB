@@ -7,7 +7,7 @@ namespace API.Controllers
 {
 
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api")]
     public class UserController : ControllerBase
     {
 
@@ -18,7 +18,7 @@ namespace API.Controllers
             _userService = userService;
         }
 
-        [HttpPost("singin")]
+        [HttpPost("user/singin")]
         public IActionResult SignIn(UserSingInRequest singInRequest)
         {
             var result = _userService.SingIn(singInRequest);
@@ -34,12 +34,18 @@ namespace API.Controllers
             else return Ok(result);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("user/{id}")]
         public IActionResult GetById([FromRoute] int id)
         {
             var result = _userService.GetUser(id);
             if (result == null) return NoContent();
             else return Ok(result);
+        }
+
+        [HttpGet("payment")]
+        public IActionResult Payment([FromQuery] string cardId)
+        {
+            return Ok(_userService.TryPayment(cardId));
         }
 
 

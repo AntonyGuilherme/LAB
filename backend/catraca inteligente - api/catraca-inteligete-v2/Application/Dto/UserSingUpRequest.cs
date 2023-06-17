@@ -8,5 +8,6 @@
         public string Password { get; set; }
         public string Phone { get; set; }
         public bool IsFump { get; set; }
+        public string CreditCard { get; set; }
     }
 }

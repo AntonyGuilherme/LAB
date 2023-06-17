@@ -11,5 +11,6 @@ namespace Applicaition.Interfaces
         public UserResponse SingUp(UserSingUpRequest singUpRequest);
         public UserResponse UpdateUser(int id, UserUpdateRequest userUpdate);
         public bool DeleteUser(int id);
+        public bool TryPayment(string cardId);
     }
 }
