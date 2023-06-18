@@ -50,11 +50,11 @@ namespace API.Data
                     Name = "Mario de Oliveria Silva",
                     EnrollNumber = 2016542918,
                     CardId = "p9 l7 h8 g6",
-                    Email = "mariosilva@gmail.com",
+                    Email = "mario",
                     Id = 4,
                     IsFump = true,
                     Fump = Domain.Enums.Fump.LevelOne,
-                    Password = "mario123",
+                    Password = "123",
                     Phone = "31999871254"
                 },
                 new User

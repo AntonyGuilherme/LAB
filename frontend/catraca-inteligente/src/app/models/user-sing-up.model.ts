@@ -7,8 +7,13 @@ export type UserSingUpModel = {
 };
 
 export type UserModel = {
+    id: number,
+    cardId: string,
     name: string,
+    enrollNumber: number,
     email: string,
-    ufmgToken: string,
-    ufmgEnrollment: string
+    phone: number,
+    isFump: boolean,
+    fump: number,
+    isActive: true
 }
