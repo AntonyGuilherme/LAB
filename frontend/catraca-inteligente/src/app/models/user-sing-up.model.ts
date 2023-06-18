@@ -1,8 +1,9 @@
 export type UserSingUpModel = {
-    name: string,
-    email: string,
-    password: string,
-    ufmgEnrollment: string
+    name?: string,
+    email?: string,
+    password?: string,
+    enrollNumber?: string,
+    phone?: string
 };
 
 export type UserModel = {

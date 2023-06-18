@@ -28,7 +28,7 @@ namespace Infrastructure.Repositories
 
         public override User Add(User user)
         {
-            var ufmgStudentInfo = _students.FirstOrDefault(x => x.CardId == user.CardId);
+            var ufmgStudentInfo = _students.FirstOrDefault(x => x.EnrollNumber == user.EnrollNumber);
             user.SetUfmgData(ufmgStudentInfo);
             _users.Add(user);
             return user;

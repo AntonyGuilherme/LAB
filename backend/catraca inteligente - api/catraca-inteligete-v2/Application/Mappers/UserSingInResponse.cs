@@ -4,6 +4,7 @@ namespace Applicaition.Mappers
 {
     public class UserSingInResponse
     {
+        public long Id { get; set; } 
         public string CardId { get; set; }
         public string Name { get; set; }
         public int EnrollNumber { get; set; }

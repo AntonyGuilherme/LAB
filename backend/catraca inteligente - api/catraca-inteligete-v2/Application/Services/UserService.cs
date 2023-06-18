@@ -44,7 +44,7 @@ namespace Applicaition.Services
         public UserResponse SingUp(UserSingUpRequest singUpRequest)
         {
             var newUser = new User(singUpRequest.Name, singUpRequest.Email, singUpRequest.EnrollNumber,
-                singUpRequest.Password, singUpRequest.Phone, singUpRequest.IsFump);
+                singUpRequest.Password, singUpRequest.Phone);
 
             var userAdded = _userRepository.Add(newUser);
             return _userMapper.Map(userAdded);

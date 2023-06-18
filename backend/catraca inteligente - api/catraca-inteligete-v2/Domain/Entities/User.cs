@@ -9,14 +9,13 @@ namespace Domain.Entities
         {
 
         }
-        public User(string name, string email, int enrollNumber, string password, string phone, bool isFump)
+        public User(string name, string email, int enrollNumber, string password, string phone)
         {
             Name = name;
             Email = email;
             EnrollNumber = enrollNumber;
             Password = password;
             Phone = phone;
-            IsFump = isFump;
         }
 
         public string Name { get; set; }
@@ -42,6 +41,7 @@ namespace Domain.Entities
             IsFump = ufmgStudentInfo.IsFump;
             Fump = ufmgStudentInfo.Fump;
             IsActive = ufmgStudentInfo.IsActive;
+            CardId = ufmgStudentInfo.CardId;
         }
     }
 }

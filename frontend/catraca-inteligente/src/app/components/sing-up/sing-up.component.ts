@@ -11,12 +11,7 @@ import { CatracaInteligenteService } from 'src/app/services/catraca-inteligente.
 })
 export class SingUpComponent {
   
-model: UserSingUpModel = {
-  name: '',
-  email: '',
-  ufmgEnrollment: '',
-  password: '',
-};
+model: UserSingUpModel = {};
 
   public constructor(
     private catracaInteligenteService: CatracaInteligenteService,

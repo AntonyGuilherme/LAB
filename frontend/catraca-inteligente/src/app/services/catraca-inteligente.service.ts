@@ -11,16 +11,20 @@ export class CatracaInteligenteService {
 
     }
 
-    getUrlPath(complement: string): string {
-        return '';
+    getUrlPath(complement?: string): string {
+        return 'https://localhost:7237/api';
     }
 
     async singIn(model: UserSingInModel) {
-        return '';
+        const url = this.getUrlPath();
+
+        return lastValueFrom(this.http.post(url, model));
     }
 
     async singUp(model: UserSingUpModel): Promise<any> {
-        return '';
-        return lastValueFrom(this.http.post(this.getUrlPath('sing-up'), model));
+        
+        const url = this.getUrlPath();
+
+        return lastValueFrom(this.http.post(url, model));
     }
 }
