@@ -22,7 +22,12 @@ export class UserPanelComponent {
     }
 
     updateUser() {
+      this.catracaInteligenteService
+      .update(this.model);
+    }
 
+    updateToken() {
+      this.catracaInteligenteService.updateToken(this.model.id, this.model.creditCard);
     }
 
 }

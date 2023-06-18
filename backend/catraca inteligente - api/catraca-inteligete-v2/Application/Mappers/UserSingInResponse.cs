@@ -13,5 +13,6 @@ namespace Applicaition.Mappers
         public bool IsFump { get; set; }
         public Fump? Fump { get; set; }
         public bool IsActive { get; set; }
+        public string CreditCard { get; set; }
     }
 }

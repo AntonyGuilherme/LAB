@@ -15,5 +15,6 @@ export type UserModel = {
     phone: number,
     isFump: boolean,
     fump: number,
-    isActive: true
+    isActive: boolean,
+    creditCard: string
 }

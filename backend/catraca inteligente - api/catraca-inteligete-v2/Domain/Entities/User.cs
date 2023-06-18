@@ -28,12 +28,14 @@ namespace Domain.Entities
         public bool IsFump { get; set; }
         public Fump? Fump { get; set; }
         public string CreditCard { get; set; }
+        public DateTime LastAccess { get; private set; } = DateTime.Today;
 
-        public void Update(string name, string email, string phone)
+        public void Update(string name, string email, string phone, bool isActive)
         {
             Name = name;
             Email = email;
             Phone = phone;
+            IsActive = isActive;
         }
 
         public void SetUfmgData(Student ufmgStudentInfo)
@@ -42,6 +44,15 @@ namespace Domain.Entities
             Fump = ufmgStudentInfo.Fump;
             IsActive = ufmgStudentInfo.IsActive;
             CardId = ufmgStudentInfo.CardId;
+        }
+
+        public bool CanAccess()
+        {
+            var actualDiferenceOfHours = (DateTime.Now - LastAccess).TotalHours;
+            
+            LastAccess = DateTime.Now;
+
+            return IsActive && actualDiferenceOfHours > 3; 
         }
     }
 }

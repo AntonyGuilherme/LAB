@@ -49,6 +49,7 @@ namespace Applicaition.Mappers
              IsFump = user.IsFump,
              Fump = user.Fump,
              IsActive = user.IsActive,
+             CreditCard = user.CreditCard
          };
     }
 }
