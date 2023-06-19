@@ -1,0 +1,28 @@
+<nb-card>
+    <nb-card-header> Cadastro </nb-card-header>
+    <nb-card-body>
+        <div class="input-continaer">
+            <label for="email"> <strong>Nome</strong> </label>
+            <input id="email" nbInput type="e-mail" [(ngModel)]="model.name">
+        </div>
+        <div class="input-continaer">
+            <label for="matricula"> <strong>Matrícula UFMG</strong> </label>
+            <input id="matricula" nbInput type="text" [(ngModel)]="model.enrollNumber">
+        </div>
+        <div class="input-continaer">
+            <label for="email"> <strong>E-mail</strong> </label>
+            <input id="email" nbInput type="e-mail" [(ngModel)]="model.email">
+        </div>
+        <div class="input-continaer">
+            <label for="telefone"> <strong>Telefone</strong> </label>
+            <input id="telefone" nbInput type="e-mail" [(ngModel)]="model.phone">
+        </div>
+        <div class="input-continaer">
+            <label for="email"> <strong> Senha </strong> </label>
+            <input id="email" nbInput type="password" [(ngModel)]="model.password">
+        </div>
+        <div class="button-container">
+            <button nbButton status="primary" (click)="singUp()">Cadastrar-se</button>
+        </div>
+    </nb-card-body>
+</nb-card>

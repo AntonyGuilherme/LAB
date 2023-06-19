@@ -42,22 +42,28 @@ namespace API.Controllers
             else return Ok(result);
         }
 
-        [HttpGet("payment")]
-        public IActionResult Payment([FromQuery] string cardId)
+        [HttpGet("access")]
+        public IActionResult CanUserAccess([FromQuery] string cardId)
         {
-            return Ok(_userService.TryPayment(cardId));
+            return Ok(_userService.TryCanUserAccess(cardId));
         }
 
 
         [HttpPost]
         public IActionResult SingUp([FromBody] UserSingUpRequest userRequest) => Ok(_userService.SingUp(userRequest));
 
-        [HttpPut]
+        [HttpPut("/api/{id}")]
         public IActionResult Update([FromRoute] int id, [FromBody] UserUpdateRequest userRequest) => Ok(_userService.UpdateUser(id, userRequest));
 
         [HttpDelete]
         public IActionResult Delete([FromRoute] int id) => Ok(_userService.DeleteUser(id));
 
+        [HttpGet("payment/{id}/{token}")]
+        public IActionResult InserPaymentToken([FromRoute] int id, [FromRoute] string token) 
+        {
+            _userService.InserPaymentToken(id, token);
+            return Ok(); 
+        }
 
     }
 }

@@ -1,0 +1,26 @@
+.user-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    .input-continaer {
+        display: flex;
+        flex-direction: column;
+        span {
+            margin-bottom: 2px;
+            font-weight: bolder;
+        }
+        
+        input, nb-checkbox {
+            width: 480px;
+        }
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 480px;
+    }
+}

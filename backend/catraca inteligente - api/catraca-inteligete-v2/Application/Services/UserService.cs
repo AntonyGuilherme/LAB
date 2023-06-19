@@ -44,7 +44,7 @@ namespace Applicaition.Services
         public UserResponse SingUp(UserSingUpRequest singUpRequest)
         {
             var newUser = new User(singUpRequest.Name, singUpRequest.Email, singUpRequest.EnrollNumber,
-                singUpRequest.Password, singUpRequest.Phone, singUpRequest.IsFump);
+                singUpRequest.Password, singUpRequest.Phone);
 
             var userAdded = _userRepository.Add(newUser);
             return _userMapper.Map(userAdded);
@@ -54,15 +54,22 @@ namespace Applicaition.Services
         public UserResponse UpdateUser(int id, UserUpdateRequest userUpdate)
         {
             var userToUpdate = _userRepository.GetById(id);
-            userToUpdate.Update(userToUpdate.Name, userToUpdate.Email, userToUpdate.Phone);
+            userToUpdate.Update(userUpdate.Name, userUpdate.Email, userUpdate.Phone, userUpdate.IsActive);
 
-            var userUpdated = _userRepository.Update(userToUpdate);
-            return _userMapper.Map(userUpdated);
+            return _userMapper.Map(userToUpdate);
         }
 
-        public bool TryPayment(string cardId)
+        public bool TryCanUserAccess(string cardId)
         {
-            return _userRepository.TryPayment(cardId);
+            var user = _userRepository.GetAll().FirstOrDefault(u => u.CardId == cardId);
+
+            return _userRepository.TryPayment(cardId) && user != null && user.CanAccess();
+        }
+
+        public void InserPaymentToken(int id, string toke)
+        {
+            var user = _userRepository.GetById(id);
+            user.CreditCard = toke;
         }
     }
 }

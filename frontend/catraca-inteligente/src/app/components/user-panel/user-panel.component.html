@@ -1,0 +1,49 @@
+<nb-card>
+    <nb-card-body>
+
+        <nb-tabset>
+            <nb-tab tabTitle="Usuário">
+                <div class="user-container">
+                    <div class="input-continaer">
+                        <label for="email"> <strong>Nome</strong> </label>
+                        <input id="email" nbInput type="e-mail" fieldSize="large" [(ngModel)]="model.name">
+                    </div>
+                    <div class="input-continaer">
+                        <label for="matricula"> <strong>Matrícula UFMG</strong> </label>
+                        <input id="matricula" nbInput type="text" fieldSize="large" [(ngModel)]="model.enrollNumber" disabled>
+                    </div>
+                    <div class="input-continaer">
+                        <label for="ufmg-token"> <strong>Carteirinha UFMG</strong> </label>
+                        <input id="ufmg-token" nbInput type="text" fieldSize="large" [(ngModel)]="model.cardId" disabled>
+                    </div>
+                    <div class="input-continaer">
+                        <label for="telefone"> <strong>Telefone</strong> </label>
+                        <input id="telefone" nbInput type="text" fieldSize="large" [(ngModel)]="model.phone">
+                    </div>
+                    <div class="input-continaer">
+                        <label for="email"> <strong>E-mail</strong> </label>
+                        <input id="email" nbInput type="e-mail" fieldSize="large" [(ngModel)]="model.email">
+                    </div>
+                    <div class="input-continaer">
+                        <nb-checkbox status="basic" [(checked)]="model.isActive" ><strong>Carteirinha Ativa</strong></nb-checkbox>
+                    </div>
+                    <div class="button-container">
+                        <button nbButton (click)="updateUser()" status="info">Atualizar Dados</button>
+                    </div>
+                </div>
+            </nb-tab>
+            <nb-tab tabTitle="Pagamentos">
+                <div class="user-container">
+                    <div class="input-continaer">
+                        <label for="token"> <strong>Token de Pagamento</strong> </label>
+                        <input id="token" nbInput type="text" fieldSize="large" [(ngModel)]="model.creditCard">
+                    </div>
+                    <div class="button-container">
+                        <button nbButton (click)="updateToken()" status="info">Atualizar Token</button>
+                    </div>
+                </div>
+            </nb-tab>
+        </nb-tabset>
+
+    </nb-card-body>
+</nb-card>

@@ -10,6 +10,7 @@ namespace Applicaition.Mappers
         public UserResponse Map(User user)
             => new UserResponse
             {
+                Id = user.Id,
                 CardId = user.CardId,
                 Name = user.Name,
                 EnrollNumber = user.EnrollNumber,
@@ -24,6 +25,7 @@ namespace Applicaition.Mappers
             {
                 usersResponse.Add(new UserResponse
                 {
+                    Id = user.Id,
                     CardId = user.CardId,
                     Name = user.Name,
                     EnrollNumber = user.EnrollNumber,
@@ -38,6 +40,7 @@ namespace Applicaition.Mappers
         public UserSingInResponse MapSingIn(User user)
          => user == null ? null : new UserSingInResponse
          {
+             Id = user.Id,
              CardId = user.CardId,
              Name = user.Name,
              EnrollNumber = user.EnrollNumber,
@@ -46,6 +49,7 @@ namespace Applicaition.Mappers
              IsFump = user.IsFump,
              Fump = user.Fump,
              IsActive = user.IsActive,
+             CreditCard = user.CreditCard
          };
     }
 }
