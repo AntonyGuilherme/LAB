@@ -72,6 +72,42 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Application.dll": {}
+        }
+      },
+      "Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.dll": {}
+        }
+      },
+      "Inrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Inrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Inrastructure.dll": {}
+        }
       }
     }
   },
@@ -200,10 +236,27 @@
         "swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "Application/1.0.0": {
+      "type": "project",
+      "path": "../Application/Application.csproj",
+      "msbuildProject": "../Application/Application.csproj"
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
+    },
+    "Inrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Inrastructure/Inrastructure.csproj",
+      "msbuildProject": "../Inrastructure/Inrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Application >= 1.0.0",
+      "Inrastructure >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -233,7 +286,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\LAB Projetos II\\Catacra Inteligente\\LAB\\backend\\catraca inteligente - api\\catraca-inteligente\\Application\\Application.csproj": {
+              "projectPath": "D:\\LAB Projetos II\\Catacra Inteligente\\LAB\\backend\\catraca inteligente - api\\catraca-inteligente\\Application\\Application.csproj"
+            },
+            "D:\\LAB Projetos II\\Catacra Inteligente\\LAB\\backend\\catraca inteligente - api\\catraca-inteligente\\Inrastructure\\Inrastructure.csproj": {
+              "projectPath": "D:\\LAB Projetos II\\Catacra Inteligente\\LAB\\backend\\catraca inteligente - api\\catraca-inteligente\\Inrastructure\\Inrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
